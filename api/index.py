@@ -4,10 +4,10 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['GET', 'POST'])
-def lionel(): 
+def home(): 
     return render_template('index.html')
 
 
 @app.route('/result', methods=['GET', 'POST'])
-def lionel(): 
+def result(): 
     return render_template('index.html')
