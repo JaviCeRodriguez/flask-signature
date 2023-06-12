@@ -11,6 +11,3 @@ def lionel():
 @app.route('/result', methods=['GET', 'POST'])
 def lionel(): 
     return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run()
