@@ -1,3 +1,5 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/src/main" }]
+  "version": 2,
+  "builds": [{ "src": "src/index.py", "use": "@vercel/python" }],
+  "routes": [{ "src": "/(.*)", "dest": "src/main.py" }]
 }
