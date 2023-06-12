@@ -10,31 +10,26 @@
     <title>Firma</title>
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
 </head>
-<table>
-    <tbody>
-        <tr>
-            <!-- Logo -->
-            <td class="logo">
-                <img src="{{url_for('static', filename='logo.png')}}" alt="Logo">
-            </td>
-            <!-- Info -->
-            <td class="info">
-                <span class="name">Javier Rodriguez</span><br>
-                <span class="rol">Teach Lead Frontend / Data Engineer</span><br>
-            </td>
-            <!-- Social links -->
-            <td class="social">
-                <a href="https://www.linkedin.com/in/rodriguezjavierc/" target="_blank" class="social-link">
-                    <img src="{{url_for('static', filename='linkedin.png')}}" alt="linkedin">
-                    <span>/in/rodriguezjavierc/</span>
-                </a>
-                <a href="https://cal.com/javier-rodriguez-xgxn8m/15min" target="_blank" class="social-link">
-                    <img src="{{url_for('static', filename='call.png')}}" alt="call">
-                    <span>Agendar meet</span>
-                </a>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
+<body>
+    <form method="post">
+        <label for="fullname">Nombre y apellido:</label><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Armando Paredes"
+            value="{{ request.form['fullname'] }}"><br>
+
+        <label for="rol">Rol en Incubator:</label><br>
+        <input type="text" id="rol" name="rol" placeholder="Tester QA Engineer" value="{{ request.form['rol'] }}"><br>
+
+        <label for="linkedin">Linkedin:</label><br>
+        <input type="text" id="linkedin" name="linkedin" placeholder="armando_paredes"
+            value="{{ request.form['linkedin'] }}"><br>
+
+        <label for="cal">Cal/Calendly:</label><br>
+        <input type="text" id="cal" name="cal" placeholder="https://cal.com/armando-paredes-123da/15min"
+            value="{{ request.form['cal'] }}"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
 
 </html>

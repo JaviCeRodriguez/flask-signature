@@ -1,0 +1,40 @@
+<!-- Crear firma para correo electrónico -->
+<!-- Debe tener Nombre y apellido, Cargo, teléfono, correo electrónico y logo de la empresa. -->
+<!-- Debe usar estilos inline -->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Firma</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+<table>
+    <tbody>
+        <tr>
+            <!-- Logo -->
+            <td class="logo">
+                <img src="{{url_for('static', filename='logo.png')}}" alt="Logo">
+            </td>
+            <!-- Info -->
+            <td class="info">
+                <span class="name">{{ fullname }}</span><br>
+                <span class="rol">{{ rol }}</span><br>
+            </td>
+            <!-- Social links -->
+            <td class="social">
+                <a href="https://www.linkedin.com/in/{{ linkedin }}/" target="_blank" class="social-link">
+                    <img src="{{url_for('static', filename='linkedin.png')}}" alt="linkedin">
+                    <span>/in/{{ linkedin }}/</span>
+                </a>
+                <a href="{{ cal }}" target="_blank" class="social-link">
+                    <img src="{{url_for('static', filename='call.png')}}" alt="call">
+                    <span>Agendar meet</span>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</html>
